@@ -1,0 +1,220 @@
+/* ========================================
+   1. GLOBAL STYLES & VARIABLES
+   ======================================== */
+:root {
+    --primary-color: oklab(54.99699999999999% -0.03427 -0.17852);
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   2. NAVBAR CUSTOMIZATION
+   ======================================== */
+.navbar {
+    background-color: var(--primary-color) !important;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffc107 !important; /* Gold accent on hover */
+}
+
+/* ========================================
+   3. HERO SECTION
+   ======================================== */
+.hero-section {
+    background: linear-gradient(rgba(213, 225, 243, 0.8), rgba(75, 140, 237, 0.9)), 
+                url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.col-lg-6 {
+    transition: transform 3.s;
+    
+
+}
+
+/* ========================================
+   4. STATS & FEATURES CARDS
+   ======================================== */
+.stat-card, .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    background: white;
+}
+
+.stat-card:hover, .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow) !important;
+}
+
+.stat-icon, .feature-icon {
+    background-color: rgba(13, 110, 253, 0.1);
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+/* ========================================
+   5. ISSUES GRID & BADGES
+   ======================================== */
+#issuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.issue-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.issue-card:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-3px);
+}
+
+.issue-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.issue-body {
+    padding: 20px;
+}
+
+.badge-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.badge-resolved {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+/* ========================================
+   6. FOOTER
+   ======================================== */
+.footer {
+    background-color:var(--primary-color);
+    color: #ecf0f1;
+    padding-top: 3rem;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+.footer h5 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.footer a:hover {
+    color: white;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ========================================
+   7. FORM STYLING (Report Page)
+   ======================================== */
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color), #0a58ca);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* ========================================
+   8. RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .d-flex {
+        justify-content: center;
+    }
+}
